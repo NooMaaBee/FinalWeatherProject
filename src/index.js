@@ -55,7 +55,8 @@ function displayForecast() {
   let forcastHtml = "";
 
   days.forEach(function (day) {
-    forcastHtml +=
+    forcastHtml =
+      forcastHtml +
       ` <div class="weather-forcast-day">
           <div class="weather-forcast-date">${day}</div>
           <div class="weather-forcast-icon">⛅️</div>
