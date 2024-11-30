@@ -52,11 +52,10 @@ function handleSearchSubmit(event) {
 
 function displayForecast() {
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  forcastHtml = "";
+  let forcastHtml = "";
 
   days.forEach(function (day) {
-    forcastHtml =
-      forcastHtml +
+    forcastHtml +=
       ` <div class="weather-forcast-day">
           <div class="weather-forcast-date">${day}</div>
           <div class="weather-forcast-icon">⛅️</div>
