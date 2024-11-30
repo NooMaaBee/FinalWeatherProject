@@ -19,8 +19,8 @@ function updateWeather(response) {
 }
 
 function formatDate(date) {
-  let hours = date.getHours();
   let minutes = date.getMinutes();
+  let hours = date.getHours();
   let days = [
     "Sunday",
     "Monday",
@@ -62,11 +62,12 @@ function displayForecast() {
           <div class="weather-forecast-icon">⛅️</div>
           <div class="weather-forecast-temperatures">
           <div class="weather-forecast-temperature">
-          <strong>15º</strong></div>
+          <strong>15º</strong></div></div>
          <div class="weather-forecast-temperature">9º</div>
          </div>
-         </div>
-    `;
+         </div>`
+         
+    ;
   });
 
   let forecastElement = document.querySelector("#forecast");
