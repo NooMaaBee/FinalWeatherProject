@@ -50,7 +50,30 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  forcastHtml = "";
+
+  days.forEach(function (day) {
+    forcastHtml =
+      forcastHtml +
+      ` <div class="weather-forcast-day">
+          <div class="weather-forcast-date">${day}</div>
+          <div class="weather-forcast-icon">⛅️</div>
+          <div class="weather-forcast-temperatures">
+          <div class="weather-forcast-temperature"><strong>15º</strong>/div>
+         <div class="weather-forcast-temperature">9º</div>
+         </div>
+         </div>
+    `;
+  });
+
+  let forcastElement = document.querySelector("#forcast");
+  forcastElement.innerHTML = forcastHtml;
+}
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("London");
+
+displayForecast();
