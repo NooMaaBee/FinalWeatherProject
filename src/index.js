@@ -18,6 +18,8 @@ function updateWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 
+getForcast(response.data.city);
+
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
