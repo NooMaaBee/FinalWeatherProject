@@ -50,7 +50,15 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForcast(city) {
+  let apiKey = "11e1c3be102e1o7a295b1f381bf4dtf4";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -65,9 +73,7 @@ function displayForecast() {
           <strong>15º</strong></div></div>
          <div class="weather-forecast-temperature">9º</div>
          </div>
-         </div>`
-         
-    ;
+         </div>`;
   });
 
   let forecastElement = document.querySelector("#forecast");
@@ -77,5 +83,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Ålesund");
-
-displayForecast();
