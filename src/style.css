@@ -30,7 +30,7 @@ header {
   padding: 0 0 30px 0;
 }
 .search-form-input {
- background: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
+  background: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
     radial-gradient(
       91% 146%,
       rgba(255, 255, 255, 0.5) 47%,
