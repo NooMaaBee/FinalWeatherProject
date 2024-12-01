@@ -17,7 +17,7 @@ function updateWeather(response) {
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
-  getForcast(response.data.city);
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -52,7 +52,7 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function getForcast(city) {
+function getForecast(city) {
   let apiKey = "11e1c3be102e1o7a295b1f381bf4dtf4";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios(apiUrl).then(displayForecast);
